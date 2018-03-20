@@ -32,7 +32,7 @@ let app = {
   },
   filterHtml (sHtml, filePath) {
     let $ = cheerio.load(sHtml),
-        $Imgs = $('noscript img'),
+        $Imgs = $('noscript img'), //根据爬取网页的DOM结构爬取想要东西
         imgData = [],
         _this = this;
         
@@ -47,7 +47,7 @@ let app = {
       console.log(imgData);
   },
   parseFileName (fileName) {
-    return path.basename(fileName);
+    return path.basename(fileName);//过滤/前面的字符,如:http:/x/x/1.png取1.png
   },
   generateFilePath (path) {
     if (fs.existsSync(path)) {
