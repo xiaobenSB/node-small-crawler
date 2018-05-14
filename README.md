@@ -1,3 +1,5 @@
+注意这个爬虫不能爬取js生成的DOM也就是只能爬取手写的
+
 # node-small-crawler
 
 > this is a project that can download images from zhihu
