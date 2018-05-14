@@ -63,6 +63,7 @@ let app = {
     request(imgUrl).pipe(fs.createWriteStream('./' + filePath + '/'+fileName)).on('close', callback && callback);
   }
 };
-//request可以用于请求图片地址让它返回图片格式的数据（如同我们电脑记事本，我们往里面加就会显示的数据）来导进我们命名的图片格式来显示
+//request可以用于请求图片地址让它返回图片格式的数据（如同我们电脑记事本，我们往里面加东西然后计算本就会解析我们写入东西的数据然后显示）
+//（如同记事本解析后的数据）来导进我们命名的图片格式来显示
 app.init(url || defaultUrl);
 
